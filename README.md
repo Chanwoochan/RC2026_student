@@ -135,7 +135,7 @@ RBDL의 설치를 권장합니다.
 </sdf>
 ```
 
-다음으로, `catkin_ws/src/rok3_study_pkgs/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
+다음으로, `rok3_ws/src/rok3_study_pkgs/worlds`폴더에 있는 `rok3.world`를 엽니다. 그리고 Fixed / Floating Dynamics을 위해 모델의 `<pose frame>`을 다음과 같이 셋팅 합니다.
 
 **Setting Fixed Dynamics in `rok3.world`**
 ``` js
@@ -173,7 +173,7 @@ RBDL의 설치를 권장합니다.
 
 
 * #### Check `model.urdf` file path for using RBDL in `rok3_plugin.cc`
-* `rok3_plugin.cc`는 Gazebo main code 이며, `/catkin_ws/src/rok3_study_pkgs/src`에 있습니다.
+* `rok3_plugin.cc`는 Gazebo main code 이며, `/rok3_ws/src/rok3_study_pkgs/src`에 있습니다.
 * **그리고, `rok3_plugin.cc`에서 사용자는 반드시 `Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*/)`함수에서, 아래 코드 예시와 같이 `Addons::URDFReadFromFile()` 함수 안에 적용되어 있는 `rok3_model.urdf`의 경로를 확인해주시고, 다르다면 바로잡아주시기 바랍니다.**
 
 * **`rok3_model.urdf`는 `/home/.gazebo/models/rok3_model/urdf` 폴더에 있으며, 파일 속성 확인을 통해 정확한 경로 확인하시기 바랍니다.**  
@@ -218,11 +218,11 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 }
 ```
 
-**모든 준비 과정이 끝나면, `catkin_make`을 입력하여 컴파일을 진행합니다.**
+**모든 준비 과정이 끝나면, `colcon build`을 입력하여 컴파일을 진행합니다.**
 * terminal :
   
 ```
-cd ~/catkin_ws && catkin_make
+cd ~/rok3_ws && colcon build
 ```
 
 **최종적으로, 다음과 같은 명령어를 통해 시뮬레이션 실행**
