@@ -26,7 +26,6 @@
 > ```js
 > mkdir -p ~/rok3_ws/src
 > cd ~/rok3_ws/src
-> cd ~/rok3_ws
 
 ##### **2. .bashrc 파일에 내용 추가하기**
 
