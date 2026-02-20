@@ -8,26 +8,27 @@
 * What to do before simulation
 
 * Simulation Manual
-  1. [Download](https://github.com/swan0421/RC2025_student) and Setting RC2025_student
+  1. [Download](https://github.com/chanwoochan/RC2026_student) and Setting RC2026_student
   2. Libraries used in rok3_study_pkgs Package
   3. How to run rok3_study_pkgs package, **Please read section 2 before proceeding.**
 ----
 
 ## What to do before simulation 
-1. [RoS-Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) install, link : http://wiki.ros.org/noetic/Installation/Ubuntu
+1. [ROS2-Humble(Ubuntu 22.04)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) install, link : https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
+2. [ROS2-Foxy(Ubuntu 20.04)](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) install, link : https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 3. [Visual Studio Code](https://code.visualstudio.com/) install, link : https://code.visualstudio.com/
 
 ---
-> **catkin workspace setting**
-##### **1. Setup catkin workspace**
-###### *`(catkin workspace가 설정되어있다면 Simulation Manual로 이동)`*
+> **workspace setting**
+##### **1. Setup workspace**
+###### *`(workspace가 설정되어있다면 Simulation Manual로 이동)`*
 * terminal:
 > ```js
-> mkdir -p ~/catkin_ws/src
-> cd ~/catkin_ws/src
-> catkin_init_workspace
-> cd ~/catkin_ws
-> catkin_make
+> mkdir -p ~/rok3_ws/src
+> cd ~/rok3_ws/src
+> cd ~/rok3_ws
+> git clone https://github.com/Chanwoochan/RC2026_student.git
+> colcon build
 
 ##### **2. .bashrc 파일에 내용 추가하기**
 
