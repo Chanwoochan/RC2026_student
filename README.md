@@ -230,7 +230,8 @@ void gazebo::rok3_plugin::Load(physics::ModelPtr _model, sdf::ElementPtr /*_sdf*
 * terminal :
   
 ```
-cd ~/rok3_ws && colcon build
+cd ~/rok3_ws && colcon build # 또는 cb
+source ~/rok3_ws/install/setup.bash # 또는 rok3env
 ```
 
 **최종적으로, 다음과 같은 명령어를 통해 시뮬레이션 실행**
