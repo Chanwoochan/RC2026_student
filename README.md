@@ -91,7 +91,15 @@ RBDL의 설치를 권장합니다.
 	> sudo make
 	> sudo make install
 
-2. 그리고 다시 패키지를 컴파일하기 위해 새로운 터미널 창을 열어 `cd ~/rok3_ws && colcon build`을 입력하여 컴파일을 진행합니다.
+ **ROS2 Dependency Install**
+
+2. 터미널을 실행합니다.
+* terminal :
+  
+	> ```js
+	> sudo apt install ros-humble-gazebo-ros xacro 
+
+3. 그리고 다시 패키지를 컴파일하기 위해 새로운 터미널 창을 열어 `cd ~/rok3_ws && colcon build`을 입력하여 컴파일을 진행합니다.
 ----
 
 ### 3.How to run rok3_study_pkgs package
@@ -228,7 +236,7 @@ cd ~/rok3_ws && colcon build
 * terminal :
   
 ```
-roslaunch rok3_study_pkgs rok3.launch
+ros2 launch rok3_study_pkgs rok3.launch.py
 ```
 
 ## 1. 실습 1 : 3-Link Planar Arm의 Forward Kinematics
