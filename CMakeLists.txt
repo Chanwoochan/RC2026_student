@@ -54,6 +54,12 @@ ament_target_dependencies(rok3
   std_msgs
   sensor_msgs
   geometry_msgs
+  gazebo
+  gazebo_ros
+  gazebo_dev
+  Boost
+  Eigen3
+  RBDL
 )
 
 install(TARGETS rok3
