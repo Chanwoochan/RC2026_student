@@ -24,7 +24,7 @@
     </include>
  
     <include>
-      <uri>model://RoK3</uri>
+      <uri>model://rok3_model</uri>
       <pose frame=''>0 0 0.947 0 0 0</pose>
       <plugin name="rok3_plugin" filename="librok3.so"/> 
     </include>
