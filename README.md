@@ -27,23 +27,6 @@
 > mkdir -p ~/rok3_ws/src
 > cd ~/rok3_ws/src
 
-##### **2. .bashrc 파일에 내용 추가하기**
-
-* terminal:
-> ```js
-> gedit ~/.bashrc
- 내용 추가하기
-> ```js
-> # ROS2 SOURCING
-> source /opt/ros/humble/setup.bash # 20.04는 foxy로
-> source ~/rok3_ws/install/setup.bash
-> 
-> # SET ROS ALIAS
-> alias cb='cd ~/rok3_ws && colcon build'
-* terminal:
-> ```js
-> source ~/.bashrc
-----
 ## Simulation Manual 
 ### 1.[Download](https://github.com/chanwoochan/RC2026_student) and Setting RC2026_student
 1. [RC2026_student Repository](https://github.com/Chanwoochan/RC2026_student.git)에 접속, link : https://github.com/Chanwoochan/RC2026_student.git
@@ -62,6 +45,24 @@
 ***(Gazebo를 실행한 적이 없는 경우, 숨김해제를 하여도 폴더가 보이지 않을 수 있음. Terminal 에서 `gazebo`를 입력하여 한번 실행해준 후 다시 확인할 것)***
          
 5. 패키지를 컴파일하기 전에, section 2를 진행하시기 바랍니다.
+----
+
+##### **2. .bashrc 파일에 내용 추가하기**
+
+* terminal:
+> ```js
+> gedit ~/.bashrc
+ 내용 추가하기
+> ```js
+> # ROS2 SOURCING
+> source /opt/ros/humble/setup.bash # 20.04는 foxy로
+> source ~/rok3_ws/install/setup.bash
+> 
+> # SET ROS ALIAS
+> alias cb='cd ~/rok3_ws && colcon build'
+* terminal:
+> ```js
+> source ~/.bashrc
 ----
 
 
