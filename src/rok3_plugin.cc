@@ -75,6 +75,8 @@ namespace gazebo
         //* TIME variable
         Model* rok3_model;
         
+        gazebo_ros::Node::SharedPtr ros2_node_;
+        
         common::Time last_update_time;
         event::ConnectionPtr update_connection;
         double dt;
