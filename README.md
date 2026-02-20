@@ -1,4 +1,4 @@
-# [2025-1] Robot Control 실습
+# [2026-1] Robot Control 실습
 
 
 #### Gazebo Simulation for RoK-3.
@@ -27,8 +27,6 @@
 > mkdir -p ~/rok3_ws/src
 > cd ~/rok3_ws/src
 > cd ~/rok3_ws
-> git clone https://github.com/Chanwoochan/RC2026_student.git
-> colcon build
 
 ##### **2. .bashrc 파일에 내용 추가하기**
 
@@ -37,37 +35,27 @@
 > gedit ~/.bashrc
  내용 추가하기
 > ```js
-> # SET ROS Neotic
-> source /opt/ros/noetic/setup.bash
-> source ~/catkin_ws/devel/setup.bash
-> 
-> # SET ROS NETWORK
-> export ROS_MASTER_URI=http://localhost:11311
-> export ROS_HOSTNAME=localhost
-> 
-> # SET ROS NETWORK (다른 컴퓨터의 Master에 접속할 때)
-> #export ROS_MASTER_URI=http://192.168.1.100:11311
-> #export ROS_HOSTNAME=192.168.1.100
+> # ROS2 SOURCING
+> source /opt/ros/humble/setup.bash # 20.04는 foxy로
+> source ~/rok3_ws/install/setup.bash
 > 
 > # SET ROS ALIAS
-> alias cw='cd ~/catkin_ws'
-> alias cs='cd ~/catkin_ws/src'
-> alias cm='cd ~/catkin_ws && catkin_make'
+> alias cb='cd ~/rok3_ws && colcon build'
 * terminal:
 > ```js
 > source ~/.bashrc
 ----
 ## Simulation Manual 
-### 1.[Download](https://github.com/swan0421/RC2025_student) and Setting RC2025_student
-1. [RC2025_student Repository](https://github.com/swan0421/RC2025_student)에 접속, link : https://github.com/swan0421/RC2025_student
+### 1.[Download](https://github.com/chanwoochan/RC2026_student) and Setting RC2026_student
+1. [RC2026_student Repository](https://github.com/Chanwoochan/RC2026_student.git)에 접속, link : https://github.com/Chanwoochan/RC2026_student.git
 
 2. 복제된 Repository에 접속 후에, `Code ▼`라는 초록색 버튼이 있는데 클릭하여 URL 주소 (https:/~)을 복사합니다.
 
-3.  주소를 복사하였다면 `Home/catkin_ws/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
+3.  주소를 복사하였다면 `Home/rok3_ws/src/` 위치에서 터미널 창을 열어 다음 명령어를 입력합니다.
 * terminal:
   
 	> ```js
-	> git clone https://github.com/swan0421/RC2025_student.git rok3_study_pkgs
+	> git clone https://github.com/Chanwoochan/RC2026_student.git rok3_study_pkgs
 	
 	
 4. `rok3_model` 폴더를 `Home/.gazebo/models/` 폴더로 가져와서 시뮬레이션을 위한 파일 셋팅을 마무리합니다.  
@@ -91,10 +79,11 @@ RBDL의 설치를 권장합니다.
 
 **RBDL Install**
 
-1. `Home/catkin_ws/src/rok3_study_pkgs/src`  위치에서 터미널을 실행합니다.
+1. 터미널을 실행합니다.
 * terminal :
   
 	> ```js
+ 	> cd ~ 
 	> git clone --recursive https://github.com/rbdl/rbdl
 	> cd rbdl
 	> mkdir build
@@ -103,7 +92,7 @@ RBDL의 설치를 권장합니다.
 	> sudo make
 	> sudo make install
 
-2. 그리고 다시 패키지를 컴파일하기 위해 새로운 터미널 창을 열어 `cd ~/catkin_ws && catkin_make`을 입력하여 컴파일을 진행합니다.
+2. 그리고 다시 패키지를 컴파일하기 위해 새로운 터미널 창을 열어 `cd ~/rok3_ws && colcon build`을 입력하여 컴파일을 진행합니다.
 ----
 
 ### 3.How to run rok3_study_pkgs package
