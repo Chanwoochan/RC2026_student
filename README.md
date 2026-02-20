@@ -36,10 +36,11 @@
 > ```js
 > # ROS2 SOURCING
 > source /opt/ros/humble/setup.bash # 20.04는 foxy로
-> source ~/rok3_ws/install/setup.bash # 오류나도 무시
 > 
 > # SET ROS ALIAS
 > alias cb='cd ~/rok3_ws && colcon build'
+> alias rok3env='source ~/rok3_ws/install/setup.bash'
+
 * terminal:
 > ```js
 > source ~/.bashrc
@@ -97,7 +98,7 @@ RBDL의 설치를 권장합니다.
 * terminal :
   
 	> ```js
-	> sudo apt install ros-humble-gazebo-ros xacro 
+	> sudo apt install ros-humble-gazebo-ros ros-humble-xacro # 20.04는 foxy로 변경
 
 3. 그리고 다시 패키지를 컴파일하기 위해 새로운 터미널 창을 열어 `cd ~/rok3_ws && colcon build`을 입력하여 컴파일을 진행합니다.
 ----
